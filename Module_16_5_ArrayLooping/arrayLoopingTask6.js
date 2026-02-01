@@ -15,6 +15,11 @@ const student = [
     { name: "John", marks: 85 },
     { name: "Alice", marks: 90 }
 ];
+for(let i in student)
+  {
+  let stuDisplay = student[i].name +" Scored "+  student[i].marks;
+  console.log(stuDisplay);
 
-console.log(student.name[0]);
+}
+
     
