@@ -48,10 +48,10 @@ function yearlyIncrementSalary(experiences){
         return newSalary;
       }
       else {
-        return "Thank you";
+        return "Thank you ! See You Next Year";
       }
 }
 
 
-const salaryIncrement = yearlyIncrementSalary(5);
+const salaryIncrement = yearlyIncrementSalary();
 console.log("Your Annual Salary Increment is:",salaryIncrement);
