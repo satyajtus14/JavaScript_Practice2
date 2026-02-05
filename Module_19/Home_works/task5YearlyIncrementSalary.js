@@ -12,10 +12,10 @@ For each employee their current salary is calculated by multiplying yearly incre
 
 
 const employees = [
-    { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
-    { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
-    { name: "shikot", experience: 9, starting: 30000, increment: 1000 },
-    { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
+    { name: "Shahin", experience: 5, starting: 20000, increment: 5000 },
+    { name: "Shihab", experience: 3, starting: 15000, increment: 7000 },
+    { name: "Shikot", experience: 9, starting: 30000, increment: 1000 },
+    { name: "Shohel", experience: 0, starting: 29000, increment: 4000 },
 ];
 
 function yearlyIncrementSalary(employees){
@@ -29,7 +29,7 @@ function yearlyIncrementSalary(employees){
 
     totalMonthySalary = totalYearlySalary / 12 ;
 
-    console.log(`${employee.name} yearly salary: ${currentSalary} and Monthly: ${totalMonthySalary}`);
+    console.log(`${employee.name} Yearly Salary: ${currentSalary} and Monthly Salary: ${totalMonthySalary}`);
    
   }
   // const totalMonthySalary = totalYearlySalary / 12 ;
