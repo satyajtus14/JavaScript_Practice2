@@ -10,6 +10,7 @@ For each employee their current salary is calculated by multiplying yearly incre
         ];
 */
 
+
 const employees = [
     { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
     { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
@@ -17,41 +18,25 @@ const employees = [
     { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
 ];
 
-function yearlyIncrementSalary(experiences){
-    const year5Experience = 5000;
-    const year3Experience = 7000;
-    const year9Experience = 1000;
-    const noExperience = 4000;
+function yearlyIncrementSalary(employees){
+  let totalYearlySalary = 0;
+  let totalMonthySalary = 0;
+  for(const employee of employees){
+    const currentSalary = employee.starting + (employee.increment * employee.experience);
 
-      if(experiences === 5){
-        let oldSalary = 20000;
-        let yearlyIncrement = year5Experience / 12 ;
-        let newSalary = Math.round(oldSalary + yearlyIncrement) ;
-        return newSalary;
-      }
-      else if(experiences === 3){
-        let oldSalary = 15000;
-        let yearlyIncrement = year3Experience / 12 ;
-        let newSalary = Math.round(oldSalary + yearlyIncrement) ;
-        return newSalary;
-      }
-      else if(experiences === 9){
-        let oldSalary = 30000;
-        let yearlyIncrement = year9Experience / 12 ;
-        let newSalary = Math.round(oldSalary + yearlyIncrement) ;
-        return newSalary;
-      }
-     else if(experiences === 0){
-        let oldSalary = 29000;
-        let yearlyIncrement = noExperience / 12 ;
-        let newSalary = Math.round(oldSalary + yearlyIncrement) ;
-        return newSalary;
-      }
-      else {
-        return "Thank you ! See You Next Year";
-      }
+  
+    totalYearlySalary = totalYearlySalary + currentSalary;
+
+    totalMonthySalary = totalYearlySalary / 12 ;
+
+    console.log(`${employee.name} yearly salary: ${currentSalary} and Monthly: ${totalMonthySalary}`);
+   
+  }
+  // const totalMonthySalary = totalYearlySalary / 12 ;
+
+    return totalMonthySalary;
 }
 
 
-const salaryIncrement = yearlyIncrementSalary();
-console.log("Your Annual Salary Increment is:",salaryIncrement);
+const empSalary = Math.round(yearlyIncrementSalary(employees));
+// console.log("Employees Monthly total Salary with Increment :",empSalary);
